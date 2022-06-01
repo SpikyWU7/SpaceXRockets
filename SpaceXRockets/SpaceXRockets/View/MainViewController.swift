@@ -9,9 +9,12 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet var scrollViewInfo: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        scrollViewInfo.layer.cornerRadius = 30.0
     }
 
 
