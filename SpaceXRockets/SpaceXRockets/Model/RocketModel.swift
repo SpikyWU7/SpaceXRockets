@@ -22,8 +22,8 @@ struct RocketModel: Codable {
     let firstFlight: String
     let country: String
     let costPerLaunch: Int
-    let firstStage: [FirstStage]
-    let secondStage: [SecondStage]
+    let firstStage: FirstStage
+    let secondStage: SecondStage
 }
 
 struct FirstStage: Codable {
@@ -35,8 +35,8 @@ struct FirstStage: Codable {
     }
     
     let engines: Int
-    let fuelAmount: Int
-    let burnTime: Int
+    let fuelAmount: Double
+    let burnTime: Int?
 }
 
 struct SecondStage: Codable {
@@ -47,6 +47,13 @@ struct SecondStage: Codable {
     }
     
     let engines: Int
-    let fuelAmount: Int
-    let burnTime: Int
+    let fuelAmount: Double
+    let burnTime: Int?
+}
+
+extension RocketModel {
+    init(data: Data) throws {
+        self = try JSONDecoder().decode(RocketModel.self, from: data)
+    }
+
 }

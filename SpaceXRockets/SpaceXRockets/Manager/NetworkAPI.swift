@@ -19,36 +19,26 @@ class NetworkAPI {
     
     var delegate: RocketsAPIDelegate?
     
-    func getRocketsData(_ urlString: String) {
-        guard let url = URL(string: urlString) else { return }
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                return
+    func fetchDataForRockets(completion: @escaping (Result<[RocketModel]?, Error>) -> Void ){
+        guard let url = URL(string: spacexDataURL) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Response error \(error)")
             }
-            if let safeData = data, let rockets = self.parseJSON(safeData) {
-                self.delegate?.updateRocketsInfo(self, rockets: rockets)
+            guard let data = data else {return}
+            do {
+                let json = try JSONDecoder().decode([RocketModel].self, from: data)
+                completion(.success(json))
+            } catch {
+                print("Parsing error: \(error)")
             }
-        }
-        task.resume()
+        }.resume()
     }
     
-    func parseJSON(_ rocketData: Data) -> RocketData? {
-        do {
-            let decodedData = try decoder.decode(RocketModel.self, from: rocketData)
-            let name = decodedData.name
-            let firstFlight = decodedData.firstFlight
-            let country = decodedData.country
-            let costPerLaunch = decodedData.costPerLaunch
-            let firstStageEngines = decodedData.firstStage[0].engines
-            let firstStageFuelAmount = decodedData.firstStage[0].fuelAmount
-            let firstStageBurnTime = decodedData.firstStage[0].burnTime
-            let secondStageEngines = decodedData.secondStage[0].engines
-            let secondStageFuelAmount = decodedData.secondStage[0].fuelAmount
-            let secondStageBurnTime = decodedData.secondStage[0].burnTime
-            let rocket = RocketData(name: name, firstFlight: firstFlight, country: country, costPerLaunch: costPerLaunch, firstStageEngines: firstStageEngines, firstStageFuelAmount: firstStageFuelAmount, firstStageBurnTime: firstStageBurnTime, secondStageEngines: secondStageEngines, secondStageFuelAmount: secondStageFuelAmount, secondStageBurnTime: secondStageBurnTime)
-            return rocket
-        } catch {
-            return nil
-        }
+    func fetchImage(from url: String?) -> Data? {
+        guard let stringUrl = url else { return nil }
+        guard let imageURL = URL(string: stringUrl) else { return nil }
+        return try? Data(contentsOf: imageURL)
     }
+    
 }

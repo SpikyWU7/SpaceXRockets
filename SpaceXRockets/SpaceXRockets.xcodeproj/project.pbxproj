@@ -16,6 +16,8 @@
 		9E1CE3A12844BFA4005B8840 /* RocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE3A02844BFA4005B8840 /* RocketData.swift */; };
 		9E1CE3A32844BFAF005B8840 /* RocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE3A22844BFAF005B8840 /* RocketModel.swift */; };
 		9E1CE3A52844BFBA005B8840 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE3A42844BFBA005B8840 /* NetworkAPI.swift */; };
+		9EBC62992848D980008BBACE /* SecularOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */; };
+		9EBC629C284E0352008BBACE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC629B284E0352008BBACE /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9E1CE3A02844BFA4005B8840 /* RocketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketData.swift; sourceTree = "<group>"; };
 		9E1CE3A22844BFAF005B8840 /* RocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketModel.swift; sourceTree = "<group>"; };
 		9E1CE3A42844BFBA005B8840 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SecularOne-Regular.ttf"; sourceTree = "<group>"; };
+		9EBC629B284E0352008BBACE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		9E1CE3882844BF2F005B8840 /* SpaceXRockets */ = {
 			isa = PBXGroup;
 			children = (
+				9EBC629A2848DC96008BBACE /* Controller */,
+				9EBC62962848D935008BBACE /* Resources */,
 				9E1CE39F2844BF92005B8840 /* View */,
 				9E1CE39E2844BF8A005B8840 /* Model */,
 				9E1CE39D2844BF7E005B8840 /* Manager */,
@@ -95,9 +101,33 @@
 			isa = PBXGroup;
 			children = (
 				9E1CE38F2844BF2F005B8840 /* Main.storyboard */,
-				9E1CE38D2844BF2F005B8840 /* MainViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9EBC62962848D935008BBACE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC62972848D944008BBACE /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9EBC62972848D944008BBACE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9EBC629A2848DC96008BBACE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E1CE38D2844BF2F005B8840 /* MainViewController.swift */,
+				9EBC629B284E0352008BBACE /* PageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +190,7 @@
 			files = (
 				9E1CE3962844BF32005B8840 /* LaunchScreen.storyboard in Resources */,
 				9E1CE3932844BF32005B8840 /* Assets.xcassets in Resources */,
+				9EBC62992848D980008BBACE /* SecularOne-Regular.ttf in Resources */,
 				9E1CE3912844BF2F005B8840 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1CE38E2844BF2F005B8840 /* MainViewController.swift in Sources */,
+				9EBC629C284E0352008BBACE /* PageViewController.swift in Sources */,
 				9E1CE3A32844BFAF005B8840 /* RocketModel.swift in Sources */,
 				9E1CE3A12844BFA4005B8840 /* RocketData.swift in Sources */,
 				9E1CE38A2844BF2F005B8840 /* AppDelegate.swift in Sources */,
