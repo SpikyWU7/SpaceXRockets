@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMf-3b-2WE">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,7 +17,7 @@
         <!--Page View Controller-->
         <scene sceneID="bqr-XC-JTG">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RMf-3b-2WE" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageVc" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RMf-3b-2WE" userLabel="Page View Controller" customClass="PageViewController" customModule="SpaceXRockets" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJS-9X-dB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-861" y="63"/>
@@ -25,7 +25,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SpaceXRockets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="SpaceXRockets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,10 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="США" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27f-aP-Nkz">
-                                                                <rect key="frame" x="108.5" y="45.5" width="41.5" height="21.5"/>
+                                                                <rect key="frame" x="0.0" y="45.5" width="150" height="21.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Rh1-ci-U5r"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -96,9 +99,6 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="150" id="GdU-kx-iC7"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
@@ -237,7 +237,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="kKf-wg-ObS">
                                                         <rect key="frame" x="263" y="46.5" width="27" height="66"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSV-PN-aYJ">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ton" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSV-PN-aYJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="27" height="21.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -612,10 +612,20 @@
                         <outlet property="firstEngines" destination="ehe-CJ-dH4" id="u9d-C7-oE0"/>
                         <outlet property="firstFuel" destination="8aD-Q3-qQU" id="1Rz-He-k8d"/>
                         <outlet property="firstLaunch" destination="72g-I8-CVf" id="q0U-Zg-elD"/>
+                        <outlet property="hsvDiameterNumbers" destination="2d9-uQ-EtN" id="i6i-y9-Tyy"/>
+                        <outlet property="hsvDiameterUnits" destination="Wbc-8z-duN" id="nL0-wY-AvU"/>
                         <outlet property="hsvDiameterView" destination="Vz5-8S-a1v" id="Xl0-bX-rZg"/>
+                        <outlet property="hsvHeightNumbers" destination="Xzr-PW-dPe" id="88l-Dy-YtH"/>
+                        <outlet property="hsvHeightUnits" destination="3e0-ia-7DY" id="kcQ-m8-ptl"/>
                         <outlet property="hsvHeightView" destination="PhF-oZ-egp" id="YLW-Dg-E1o"/>
+                        <outlet property="hsvMassNumbers" destination="bg8-Te-KZf" id="PyJ-UZ-gmI"/>
+                        <outlet property="hsvMassUnits" destination="Gi3-c0-hHe" id="XDM-L3-UzU"/>
                         <outlet property="hsvMassView" destination="j4t-aG-izh" id="oCr-15-b4Q"/>
                         <outlet property="hsvPayloadLb" destination="lhe-ct-q65" id="uYT-df-sRz"/>
+                        <outlet property="hsvPayloadWeightsNumbers" destination="PQb-f2-fPc" id="05a-lE-XTi"/>
+                        <outlet property="hsvPayloadWeightsUnits" destination="x1m-BI-TYL" id="eIc-sL-oCk"/>
+                        <outlet property="pageController" destination="rNV-Mh-rnD" id="kEN-4p-uDp"/>
+                        <outlet property="rocketImage" destination="gwd-mc-WhL" id="jhQ-g8-GXy"/>
                         <outlet property="rocketName" destination="njz-3Q-zLK" id="963-oO-lSc"/>
                         <outlet property="scrollViewInfo" destination="dXo-Xo-YQH" id="rtS-yo-bPg"/>
                         <outlet property="secondBurnTime" destination="bgN-Ex-GSA" id="G5E-5H-wzn"/>

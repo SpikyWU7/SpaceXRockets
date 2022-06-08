@@ -18,6 +18,7 @@
 		9E1CE3A52844BFBA005B8840 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1CE3A42844BFBA005B8840 /* NetworkAPI.swift */; };
 		9EBC62992848D980008BBACE /* SecularOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */; };
 		9EBC629C284E0352008BBACE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC629B284E0352008BBACE /* PageViewController.swift */; };
+		9EBC629E284F431C008BBACE /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC629D284F431C008BBACE /* Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9E1CE3A42844BFBA005B8840 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SecularOne-Regular.ttf"; sourceTree = "<group>"; };
 		9EBC629B284E0352008BBACE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		9EBC629D284F431C008BBACE /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				9E1CE3A02844BFA4005B8840 /* RocketData.swift */,
 				9E1CE3A22844BFAF005B8840 /* RocketModel.swift */,
+				9EBC629D284F431C008BBACE /* Format.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBC629E284F431C008BBACE /* Format.swift in Sources */,
 				9E1CE38E2844BF2F005B8840 /* MainViewController.swift in Sources */,
 				9EBC629C284E0352008BBACE /* PageViewController.swift in Sources */,
 				9E1CE3A32844BFAF005B8840 /* RocketModel.swift in Sources */,
