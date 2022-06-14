@@ -14,6 +14,7 @@ protocol RocketsAPIDelegate {
 class NetworkAPI {
     
     let spacexDataURL = "https://api.spacexdata.com/v4/rockets"
+    let spacexLaunches = "https://api.spacexdata.com/v4/launches"
     private let decoder = JSONDecoder()
     private let dateFormater = DateFormatter()
     private let session = URLSession(configuration: .default)

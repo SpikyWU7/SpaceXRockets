@@ -19,6 +19,10 @@
 		9EBC62992848D980008BBACE /* SecularOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */; };
 		9EBC629C284E0352008BBACE /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC629B284E0352008BBACE /* PageViewController.swift */; };
 		9EBC629E284F431C008BBACE /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC629D284F431C008BBACE /* Format.swift */; };
+		9EBC62A02851FCCF008BBACE /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC629F2851FCCF008BBACE /* LaunchesViewController.swift */; };
+		9EBC62A2285207C5008BBACE /* RocketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC62A1285207C5008BBACE /* RocketCell.xib */; };
+		9EBC62A4285207EF008BBACE /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC62A3285207EF008BBACE /* RocketCell.swift */; };
+		9EBC62A628577726008BBACE /* LaunchDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC62A528577726008BBACE /* LaunchDates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		9EBC62982848D980008BBACE /* SecularOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SecularOne-Regular.ttf"; sourceTree = "<group>"; };
 		9EBC629B284E0352008BBACE /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9EBC629D284F431C008BBACE /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		9EBC629F2851FCCF008BBACE /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
+		9EBC62A1285207C5008BBACE /* RocketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketCell.xib; sourceTree = "<group>"; };
+		9EBC62A3285207EF008BBACE /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
+		9EBC62A528577726008BBACE /* LaunchDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 				9E1CE3A02844BFA4005B8840 /* RocketData.swift */,
 				9E1CE3A22844BFAF005B8840 /* RocketModel.swift */,
 				9EBC629D284F431C008BBACE /* Format.swift */,
+				9EBC62A528577726008BBACE /* LaunchDates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				9E1CE38F2844BF2F005B8840 /* Main.storyboard */,
+				9EBC62A1285207C5008BBACE /* RocketCell.xib */,
+				9EBC62A3285207EF008BBACE /* RocketCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 			children = (
 				9E1CE38D2844BF2F005B8840 /* MainViewController.swift */,
 				9EBC629B284E0352008BBACE /* PageViewController.swift */,
+				9EBC629F2851FCCF008BBACE /* LaunchesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +206,7 @@
 				9E1CE3962844BF32005B8840 /* LaunchScreen.storyboard in Resources */,
 				9E1CE3932844BF32005B8840 /* Assets.xcassets in Resources */,
 				9EBC62992848D980008BBACE /* SecularOne-Regular.ttf in Resources */,
+				9EBC62A2285207C5008BBACE /* RocketCell.xib in Resources */,
 				9E1CE3912844BF2F005B8840 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,11 +219,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EBC629E284F431C008BBACE /* Format.swift in Sources */,
+				9EBC62A02851FCCF008BBACE /* LaunchesViewController.swift in Sources */,
 				9E1CE38E2844BF2F005B8840 /* MainViewController.swift in Sources */,
 				9EBC629C284E0352008BBACE /* PageViewController.swift in Sources */,
 				9E1CE3A32844BFAF005B8840 /* RocketModel.swift in Sources */,
 				9E1CE3A12844BFA4005B8840 /* RocketData.swift in Sources */,
+				9EBC62A628577726008BBACE /* LaunchDates.swift in Sources */,
 				9E1CE38A2844BF2F005B8840 /* AppDelegate.swift in Sources */,
+				9EBC62A4285207EF008BBACE /* RocketCell.swift in Sources */,
 				9E1CE38C2844BF2F005B8840 /* SceneDelegate.swift in Sources */,
 				9E1CE3A52844BFBA005B8840 /* NetworkAPI.swift in Sources */,
 			);
