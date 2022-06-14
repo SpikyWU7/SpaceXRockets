@@ -18,7 +18,7 @@ class RocketCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        rocketView.layer.cornerRadius = rocketView.frame.size.height / 5
+        rocketView.layer.cornerRadius = rocketView.frame.size.height / 25
     }
     
     func one(with data: LaunchDates) {
@@ -32,7 +32,7 @@ class RocketCell: UITableViewCell {
                 rocketImage.image = UIImage(named: "rocketFalse")
             }
         } else {
-            rocketImage.image = UIImage(named: "True or False")
+            rocketImage.image = UIImage(named: "unknown")
         }
     }
     

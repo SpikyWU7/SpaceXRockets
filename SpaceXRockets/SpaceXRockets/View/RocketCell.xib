@@ -9,45 +9,50 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="sPC-hb-zcE" customClass="RocketCell" customModule="SpaceXRockets" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="463" height="148"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="sPC-hb-zcE" customClass="RocketCell" customModule="SpaceXRockets" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="93"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sPC-hb-zcE" id="xCl-9V-uD8">
-                <rect key="frame" x="0.0" y="0.0" width="463" height="148"/>
+                <rect key="frame" x="0.0" y="0.0" width="463" height="93"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocketTrue" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-Cv-gZF">
-                        <rect key="frame" x="343" y="24" width="100" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="hCm-4S-1oC"/>
-                            <constraint firstAttribute="width" constant="100" id="ikD-fd-fX0"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heavy Holidays CRS-24" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjI-MG-DN6">
-                        <rect key="frame" x="20" y="24" width="291" height="48"/>
+                        <rect key="frame" x="20" y="14" width="273" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 февраля, 2022" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-bL-lWU">
-                        <rect key="frame" x="20" y="92" width="151" height="24"/>
+                        <rect key="frame" x="20" y="55" width="151" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocketTrue" translatesAutoresizingMaskIntoConstraints="NO" id="u3n-Cv-gZF">
+                        <rect key="frame" x="393" y="21" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Fvw-aH-NF2"/>
+                            <constraint firstAttribute="height" constant="50" id="wBh-bJ-BMt"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="u3n-Cv-gZF" secondAttribute="bottom" constant="24" id="51e-5b-dLX"/>
-                    <constraint firstItem="TjI-MG-DN6" firstAttribute="leading" secondItem="xCl-9V-uD8" secondAttribute="leading" constant="20" id="AZk-xr-1dp"/>
-                    <constraint firstItem="u3n-Cv-gZF" firstAttribute="top" secondItem="xCl-9V-uD8" secondAttribute="top" constant="24" id="FZm-JM-YzX"/>
-                    <constraint firstItem="TjI-MG-DN6" firstAttribute="top" secondItem="xCl-9V-uD8" secondAttribute="top" constant="24" id="arX-oE-4yL"/>
-                    <constraint firstAttribute="bottom" secondItem="TjI-MG-DN6" secondAttribute="bottom" constant="76" id="h6Y-jY-Aoi"/>
-                    <constraint firstItem="u3n-Cv-gZF" firstAttribute="leading" secondItem="TjI-MG-DN6" secondAttribute="trailing" constant="32" id="h8d-Bd-THT"/>
-                    <constraint firstItem="s7n-bL-lWU" firstAttribute="top" secondItem="TjI-MG-DN6" secondAttribute="bottom" constant="20" id="iMh-hp-AFr"/>
-                    <constraint firstItem="u3n-Cv-gZF" firstAttribute="leading" secondItem="TjI-MG-DN6" secondAttribute="trailing" constant="32" id="ijp-sE-DV8"/>
-                    <constraint firstItem="s7n-bL-lWU" firstAttribute="leading" secondItem="xCl-9V-uD8" secondAttribute="leading" constant="20" id="kfe-Ye-cxc"/>
-                    <constraint firstAttribute="trailing" secondItem="u3n-Cv-gZF" secondAttribute="trailing" constant="20" id="koi-Zd-grg"/>
+                    <constraint firstItem="u3n-Cv-gZF" firstAttribute="top" secondItem="xCl-9V-uD8" secondAttribute="top" constant="21" id="24t-ZT-PQV"/>
+                    <constraint firstAttribute="bottom" secondItem="s7n-bL-lWU" secondAttribute="bottom" constant="14" id="2kA-Lz-wso"/>
+                    <constraint firstItem="s7n-bL-lWU" firstAttribute="leading" secondItem="xCl-9V-uD8" secondAttribute="leading" constant="20" id="3ik-PJ-4X7"/>
+                    <constraint firstItem="s7n-bL-lWU" firstAttribute="top" secondItem="TjI-MG-DN6" secondAttribute="bottom" constant="11" id="3wK-Jz-DTB"/>
+                    <constraint firstAttribute="bottom" secondItem="u3n-Cv-gZF" secondAttribute="bottom" constant="22" id="5NV-64-Gpi"/>
+                    <constraint firstAttribute="trailing" secondItem="u3n-Cv-gZF" secondAttribute="trailing" constant="20" id="KHx-GV-2Lf"/>
+                    <constraint firstItem="TjI-MG-DN6" firstAttribute="leading" secondItem="xCl-9V-uD8" secondAttribute="leading" constant="20" id="OzW-Z1-V4H"/>
+                    <constraint firstItem="TjI-MG-DN6" firstAttribute="top" secondItem="xCl-9V-uD8" secondAttribute="top" constant="14" id="haJ-PD-Z8L"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                        <integer key="value" value="25"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
@@ -56,7 +61,7 @@
                 <outlet property="rocketImage" destination="u3n-Cv-gZF" id="RSC-CF-nQb"/>
                 <outlet property="rocketView" destination="xCl-9V-uD8" id="dig-Xb-rsX"/>
             </connections>
-            <point key="canvasLocation" x="86.231884057971016" y="95.758928571428569"/>
+            <point key="canvasLocation" x="86.231884057971016" y="96.763392857142847"/>
         </tableViewCell>
     </objects>
     <resources>

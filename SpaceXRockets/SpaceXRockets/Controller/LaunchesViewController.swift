@@ -10,7 +10,6 @@ import UIKit
 
 class LaunchesViewController: UIViewController {
     
-    @IBOutlet var navBackButton: UIButton!
     @IBOutlet var launchesTable: UITableView!
     
     var newArray: [LaunchDates] = []
@@ -19,7 +18,7 @@ class LaunchesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         launchesTable.dataSource = self
-        title = "Rocket launch dates"
+        title = "Запуски ракет"
         launchesTable.register(UINib(nibName: "RocketCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         loadMessages()
     }
@@ -49,6 +48,9 @@ extension LaunchesViewController: UITableViewDataSource {
         
         cell.one(with: launch)
         return cell
+    }
+    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
 }
