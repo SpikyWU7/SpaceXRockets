@@ -7,16 +7,16 @@ class LaunchesViewController: UIViewController {
     
     private var newArray: [LaunchDates] = []
     private let networkAPI = NetworkAPI()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         launchesTable.dataSource = self
         title = "Запуски ракет"
         launchesTable.register(UINib(nibName: "RocketCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-        loadMessages()
+        loadData()
     }
     
-    private func loadMessages() {
+    private func loadData() {
         networkAPI.fetchDataForRockets(dataType: [LaunchDates].self, url: networkAPI.spacexLaunches, formaterString: StringOld.oldStringRocketLaunches.rawValue) { data in
             self.newArray = data
             self.newArray.sort(by: { $0.dateUtc > $1.dateUtc })

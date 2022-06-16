@@ -8,7 +8,6 @@ class RocketCell: UITableViewCell {
     @IBOutlet var rocketImage: UIImageView!
     
     let format = Format()
-    var id: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -16,8 +15,8 @@ class RocketCell: UITableViewCell {
     }
     
     func initCell(with data: LaunchDates) {
-        rocketCellLabel.text = data.name
-        rocketCellDate.text = format.strToDate(date: data.dateUtc)
+            rocketCellLabel.text = data.name
+            rocketCellDate.text = format.strToDate(date: data.dateUtc)
         
         if let data = data.success {
             if data {
@@ -29,5 +28,4 @@ class RocketCell: UITableViewCell {
             rocketImage.image = UIImage(named: "unknown")
         }
     }
-    
 }
