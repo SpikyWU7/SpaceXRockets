@@ -1,10 +1,3 @@
-//
-//  PageViewController.swift
-//  SpaceXRockets
-//
-//  Created by Spiky WU7 on 06.06.2022.
-//
-
 import Foundation
 import UIKit
 
@@ -21,10 +14,10 @@ class PageViewController: UIPageViewController {
     }
 
     @objc func reload() {
-        NetworkAPI().fetchDataForRockets(dataType: [RocketModel].self, url: networkAPI.spacexDataURL, formaterString: StringOld.oldStringListRocket.rawValue) { data in
+        networkAPI.fetchDataForRockets(dataType: [RocketModel].self, url: networkAPI.spacexDataURL, formaterString: StringOld.oldStringListRocket.rawValue) { data in
                 self.newArray = data
                 self.pvcMethod()
-                self.dataTransport()
+                self.dataTransition()
         }
 }
     
@@ -92,7 +85,7 @@ class PageViewController: UIPageViewController {
         return mVC
     }
     
-    func dataTransport() {
+    private func dataTransition() {
         guard let mVC = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else { return }
         mVC.arrayMainVC = self.newArray
     }

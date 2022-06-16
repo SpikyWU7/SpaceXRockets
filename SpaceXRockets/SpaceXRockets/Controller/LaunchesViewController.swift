@@ -1,19 +1,12 @@
-//
-//  LaunchesViewController.swift
-//  SpaceXRockets
-//
-//  Created by Spiky WU7 on 09.06.2022.
-//
-
 import Foundation
 import UIKit
 
 class LaunchesViewController: UIViewController {
     
-    @IBOutlet var launchesTable: UITableView!
+    @IBOutlet private var launchesTable: UITableView!
     
-    var newArray: [LaunchDates] = []
-    let networkAPI = NetworkAPI()
+    private var newArray: [LaunchDates] = []
+    private let networkAPI = NetworkAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +24,7 @@ class LaunchesViewController: UIViewController {
         }
     }
         
-    @IBAction func backButtonPressed() {
+    @IBAction private func backButtonPressed() {
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -46,7 +39,7 @@ extension LaunchesViewController: UITableViewDataSource {
         let cell = launchesTable.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! RocketCell
         cell.rocketCellLabel.text = launch.name
         
-        cell.one(with: launch)
+        cell.initCell(with: launch)
         return cell
     }
     private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

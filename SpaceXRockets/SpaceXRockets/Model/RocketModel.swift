@@ -1,10 +1,3 @@
-//
-//  RocketModel.swift
-//  SpaceXRockets
-//
-//  Created by Spiky WU7 on 30.05.2022.
-//
-
 import Foundation
 
 struct RocketModel: Codable {
@@ -21,6 +14,7 @@ struct RocketModel: Codable {
         case diameter
         case mass
         case payloadWeights = "payload_weights"
+        case id
     }
     
     let name: String
@@ -34,6 +28,7 @@ struct RocketModel: Codable {
     let diameter: Diameter
     let mass: Mass
     let payloadWeights: [PayloadWeights]
+    let id: String
     
     var launchCost: String {
         String(format: "$%.0f млн.", costPerLaunch / 1000000)

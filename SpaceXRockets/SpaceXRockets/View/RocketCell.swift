@@ -1,10 +1,3 @@
-//
-//  RocketCell.swift
-//  SpaceXRockets
-//
-//  Created by Spiky WU7 on 09.06.2022.
-//
-
 import Foundation
 import UIKit
 
@@ -15,13 +8,14 @@ class RocketCell: UITableViewCell {
     @IBOutlet var rocketImage: UIImageView!
     
     let format = Format()
+    var id: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         rocketView.layer.cornerRadius = rocketView.frame.size.height / 25
     }
     
-    func one(with data: LaunchDates) {
+    func initCell(with data: LaunchDates) {
         rocketCellLabel.text = data.name
         rocketCellDate.text = format.strToDate(date: data.dateUtc)
         
