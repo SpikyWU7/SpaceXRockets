@@ -78,15 +78,13 @@
 		9E1CE3882844BF2F005B8840 /* SpaceXRockets */ = {
 			isa = PBXGroup;
 			children = (
+				9E898CE12859DF370062DC5B /* Helpers */,
 				9EBC629A2848DC96008BBACE /* Controller */,
 				9EBC62962848D935008BBACE /* Resources */,
 				9E1CE39F2844BF92005B8840 /* View */,
 				9E1CE39E2844BF8A005B8840 /* Model */,
 				9E1CE39D2844BF7E005B8840 /* Manager */,
-				9E1CE3892844BF2F005B8840 /* AppDelegate.swift */,
-				9E1CE38B2844BF2F005B8840 /* SceneDelegate.swift */,
 				9E1CE3922844BF31005B8840 /* Assets.xcassets */,
-				9E1CE3942844BF32005B8840 /* LaunchScreen.storyboard */,
 				9E1CE3972844BF32005B8840 /* Info.plist */,
 			);
 			path = SpaceXRockets;
@@ -117,8 +115,18 @@
 				9E1CE38F2844BF2F005B8840 /* Main.storyboard */,
 				9EBC62A1285207C5008BBACE /* RocketCell.xib */,
 				9EBC62A3285207EF008BBACE /* RocketCell.swift */,
+				9E1CE3942844BF32005B8840 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9E898CE12859DF370062DC5B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9E1CE3892844BF2F005B8840 /* AppDelegate.swift */,
+				9E1CE38B2844BF2F005B8840 /* SceneDelegate.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9EBC62962848D935008BBACE /* Resources */ = {

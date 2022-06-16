@@ -55,11 +55,20 @@ class MainViewController: UIViewController {
     
     var tmpRocketName: String!
     
+    //MARK: - Horizontal
     var tmpHeightNumbers: String!
-    var tmpDiameterNumbers: String!
-    var tmpMassNumbers: String!
-    var tmpPayloadWeightsNumbers: String!
+    var tmpHeightUnits: String!
     
+    var tmpDiameterNumbers: String!
+    var tmpDiameterUnits: String!
+    
+    var tmpMassNumbers: String!
+    var tmpMassUnits: String!
+    
+    var tmpPayloadWeightsNumbers: String!
+    var tmpPayloadWeightUnits: String!
+    
+    //MARK: - Main information
     var tmpFirstLaunch: String!
     var tmpCountryName: String!
     var tmpCostAmount: String!
@@ -78,19 +87,30 @@ class MainViewController: UIViewController {
         setupView()
         pageController.currentPage = indexNumberPVC
         fillTitle()
+        fillHsv()
         fillFirstStage()
         fillSecondStage()
     }
     
     private func fillTitle() {
         rocketName.text = tmpRocketName
-        hsvHeightNumbers.text = tmpHeightNumbers
-        hsvDiameterNumbers.text = tmpDiameterNumbers
-        hsvMassNumbers.text = tmpMassNumbers
-        hsvPayloadWeightsNumbers.text = tmpPayloadWeightsNumbers
         costAmount.text = tmpCostAmount
         countryName.text = tmpCountryName
         firstLaunch.text = tmpFirstLaunch
+    }
+    
+    private func fillHsv() {
+        hsvHeightNumbers.text = tmpHeightNumbers
+        hsvHeightUnits.text = tmpHeightUnits
+        
+        hsvDiameterNumbers.text = tmpDiameterNumbers
+        hsvDiameterUnits.text = tmpDiameterUnits
+        
+        hsvMassNumbers.text = tmpMassNumbers
+        hsvMassUnits.text = tmpMassUnits
+        
+        hsvPayloadWeightsNumbers.text = tmpPayloadWeightsNumbers
+        hsvPayloadWeightsUnits.text = tmpPayloadWeightUnits
     }
     
     private func fillFirstStage() {

@@ -730,6 +730,9 @@
                                     <segment title="kg" width="45"/>
                                     <segment title="lb" width="45"/>
                                 </segments>
+                                <connections>
+                                    <action selector="payloadChanged:" destination="gUw-Qr-1oe" eventType="valueChanged" id="Tcg-P8-RVa"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LhQ-BW-ifF">
                                 <rect key="frame" x="213" y="221" width="91" height="32"/>
@@ -737,6 +740,9 @@
                                     <segment title="kg" width="45"/>
                                     <segment title="lb" width="45"/>
                                 </segments>
+                                <connections>
+                                    <action selector="massChanged:" destination="gUw-Qr-1oe" eventType="valueChanged" id="V2K-CL-sMf"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="znx-o3-U1K">
                                 <rect key="frame" x="213" y="167" width="91" height="32"/>
@@ -744,6 +750,9 @@
                                     <segment title="m" width="45"/>
                                     <segment title="ft" width="45"/>
                                 </segments>
+                                <connections>
+                                    <action selector="diameterChanged:" destination="gUw-Qr-1oe" eventType="valueChanged" id="tu2-cn-1xP"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-4G-ahZ">
                                 <rect key="frame" x="213" y="113" width="91" height="32"/>
@@ -751,6 +760,9 @@
                                     <segment title="m" width="45"/>
                                     <segment title="ft" width="45"/>
                                 </segments>
+                                <connections>
+                                    <action selector="heightChanged:" destination="gUw-Qr-1oe" eventType="valueChanged" id="JOP-cp-rbI"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wvm-iG-9ys"/>
@@ -778,6 +790,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jeM-kd-v0V"/>
+                    <connections>
+                        <outlet property="diameterSegControl" destination="znx-o3-U1K" id="NTa-05-lsy"/>
+                        <outlet property="heightSegControl" destination="BXp-4G-ahZ" id="W0a-Yd-GnS"/>
+                        <outlet property="massSegControl" destination="LhQ-BW-ifF" id="Rep-g7-DGM"/>
+                        <outlet property="payloadWghtsSegControl" destination="1x2-hJ-Pli" id="ae0-gW-OxI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhU-C9-9eM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -791,9 +809,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZhW-sD-0iB">
-                                <rect key="frame" x="0.0" y="44" width="320" height="554"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZhW-sD-0iB">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmN-0G-cH4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -810,12 +828,13 @@
                             <constraint firstItem="MmN-0G-cH4" firstAttribute="leading" secondItem="k1s-k8-rRS" secondAttribute="leading" id="JEm-du-fQa"/>
                             <constraint firstItem="MmN-0G-cH4" firstAttribute="top" secondItem="k1s-k8-rRS" secondAttribute="top" id="SXa-0i-K51"/>
                             <constraint firstItem="ZhW-sD-0iB" firstAttribute="trailing" secondItem="kaz-Ky-6UT" secondAttribute="trailing" id="X46-gX-yV5"/>
-                            <constraint firstItem="ZhW-sD-0iB" firstAttribute="bottom" secondItem="kaz-Ky-6UT" secondAttribute="bottom" constant="30" id="qbT-FG-2qU"/>
+                            <constraint firstItem="ZhW-sD-0iB" firstAttribute="bottom" secondItem="kaz-Ky-6UT" secondAttribute="bottom" id="qbT-FG-2qU"/>
                             <constraint firstAttribute="trailing" secondItem="MmN-0G-cH4" secondAttribute="trailing" id="uyb-Es-bgB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ssb-vL-6M1">
                         <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="DjD-Sg-GQD">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="backButtonPressed" destination="0VG-qF-ycQ" id="RAi-sS-HPs"/>
                             </connections>
@@ -833,12 +852,14 @@
         <!--Navigation Controller-->
         <scene sceneID="Gg3-GJ-IhZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ozs-PJ-xxc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="ozs-PJ-xxc" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="AKe-9C-Ws6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ECl-0o-hXa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
