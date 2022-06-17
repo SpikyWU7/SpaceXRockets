@@ -11,7 +11,7 @@ class LaunchesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         launchesTable.dataSource = self
-        title = "Запуски ракет"
+        title = "Запуски"
         launchesTable.register(UINib(nibName: "RocketCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         loadData()
     }

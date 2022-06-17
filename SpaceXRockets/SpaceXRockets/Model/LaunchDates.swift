@@ -6,6 +6,7 @@ struct LaunchDates: Decodable {
     var dateUtc: Date
     var rocket: String
     
+    
     enum CodingKeys: String, CodingKey {
         case name
         case success
