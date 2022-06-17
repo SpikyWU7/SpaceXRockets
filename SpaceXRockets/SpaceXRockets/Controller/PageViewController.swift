@@ -52,7 +52,7 @@ class PageViewController: UIPageViewController {
             mVC.tmpHeightUnits = "m"
         }
         
-        if UserDefaults.standard.string(forKey: "Diameter") == "ft" && newArray[index].diameter.feet != nil {
+        if UserDefaults.standard.string(forKey: "Diameter") == "ft" {
             mVC.tmpDiameterNumbers = "\(newArray[index].diameter.feet)"
             mVC.tmpDiameterUnits = "ft"
         } else {
@@ -68,7 +68,7 @@ class PageViewController: UIPageViewController {
             mVC.tmpMassUnits = "kg"
         }
         
-        if UserDefaults.standard.string(forKey: "Payload") == "lb" && newArray[index].payloadWeights.first != nil {
+        if UserDefaults.standard.string(forKey: "Payload") == "lb" {
             mVC.tmpPayloadWeightsNumbers = "\(String(format.formatNums(value: newArray[index].payloadWeights.first?.lb ?? 0)))"
             mVC.tmpPayloadWeightUnits = "lb"
         } else if newArray[index].payloadWeights.first != nil{
