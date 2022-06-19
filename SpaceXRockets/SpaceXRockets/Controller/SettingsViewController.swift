@@ -6,41 +6,37 @@ class SettingsViewController: UIViewController {
     @IBOutlet private var diameterSegControl: UISegmentedControl!
     @IBOutlet private var massSegControl: UISegmentedControl!
     @IBOutlet private var payloadWghtsSegControl: UISegmentedControl!
-        
     private var changeState = false
     private var action = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSegmentState()
     }
-    
     private func setupSegmentState() {
-        if UserDefaults.standard.string(forKey: "Height") ==  "ft" {
+        if UserDefaults.standard.string(forKey: "Height") == "ft" {
             heightSegControl.selectedSegmentIndex = 1
         } else {
             heightSegControl.selectedSegmentIndex = 0
         }
-        if UserDefaults.standard.string(forKey: "Diameter") ==  "ft" {
+        if UserDefaults.standard.string(forKey: "Diameter") == "ft" {
             diameterSegControl.selectedSegmentIndex = 1
         } else {
             diameterSegControl.selectedSegmentIndex = 0
         }
-        if UserDefaults.standard.string(forKey: "Mass") ==  "lb" {
+        if UserDefaults.standard.string(forKey: "Mass") == "lb" {
             massSegControl.selectedSegmentIndex = 1
         } else {
             massSegControl.selectedSegmentIndex = 0
         }
-        if UserDefaults.standard.string(forKey: "Payload") ==  "lb" {
+        if UserDefaults.standard.string(forKey: "Payload") == "lb" {
             payloadWghtsSegControl.selectedSegmentIndex = 1
         } else {
             payloadWghtsSegControl.selectedSegmentIndex = 0
         }
     }
-        
     @IBAction private func heightChanged(_ sender: UISegmentedControl) {
         changeState = true
-        switch (sender.selectedSegmentIndex){
+        switch sender.selectedSegmentIndex {
         case 0:
             UserDefaults.standard.set("m", forKey: "Height")
         case 1:
@@ -51,7 +47,7 @@ class SettingsViewController: UIViewController {
         }
     @IBAction private func diameterChanged(_ sender: UISegmentedControl) {
         changeState = true
-        switch (sender.selectedSegmentIndex){
+        switch sender.selectedSegmentIndex {
         case 0:
             UserDefaults.standard.set("m", forKey: "Diameter")
         case 1:
@@ -62,7 +58,7 @@ class SettingsViewController: UIViewController {
         }
     @IBAction private func massChanged(_ sender: UISegmentedControl) {
         changeState = true
-        switch (sender.selectedSegmentIndex){
+        switch sender.selectedSegmentIndex {
         case 0:
             UserDefaults.standard.set("kg", forKey: "Mass")
         case 1:
@@ -71,10 +67,9 @@ class SettingsViewController: UIViewController {
             print("Error")
         }
         }
-    
     @IBAction private func payloadChanged(_ sender: UISegmentedControl) {
         changeState = true
-        switch (sender.selectedSegmentIndex){
+        switch sender.selectedSegmentIndex {
         case 0:
             UserDefaults.standard.set("kg", forKey: "Payload")
         case 1:
@@ -83,7 +78,6 @@ class SettingsViewController: UIViewController {
             print("Error")
         }
         }
-    
     @IBAction private func cancelPressed() {
         action = true
         if changeState {
