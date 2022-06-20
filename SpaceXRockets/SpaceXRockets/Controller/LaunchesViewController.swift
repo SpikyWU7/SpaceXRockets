@@ -13,11 +13,13 @@ class LaunchesViewController: UIViewController {
         loadData()
     }
     private func loadData() {
-        networkAPI.fetchDataForRockets(dataType: [LaunchDates].self,
-                                       url: networkAPI.spacexLaunches,
-                                       formaterString: StringOld.oldStringRocketLaunches.rawValue) { data in
+        networkAPI.fetchDataForRockets(
+            dataType: [LaunchDates].self,
+            url: networkAPI.spacexLaunches,
+            formaterString: StringOld.oldStringRocketLaunches.rawValue
+        ) { data in
             self.newArray = data
-            self.newArray.sort(by: { $0.dateUtc > $1.dateUtc })
+            self.newArray.sort { $0.dateUtc > $1.dateUtc }
             self.launchesTable.reloadData()
         }
     }
@@ -30,13 +32,17 @@ extension LaunchesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newArray.count
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let launch = newArray[indexPath.row]
-        let cell = launchesTable.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as? RocketCell
-        cell!.rocketCellLabel.text = launch.name
-        cell!.initCell(with: launch)
-        return cell!
+        guard let cell = launchesTable.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as? RocketCell else {
+            return UITableViewCell()
+        }
+        cell.rocketCellLabel.text = launch.name
+        cell.initCell(with: launch)
+        return cell
     }
+
     private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }

@@ -4,7 +4,7 @@ class MainViewController: UIViewController {
     @IBOutlet private var rocketName: UILabel!
     @IBOutlet private var pageController: UIPageControl!
     @IBOutlet private var scrollViewInfo: UIView!
-// MARK: - Horizontal Stack View outlets
+    // MARK: - Horizontal Stack View outlets
     @IBOutlet private var hsvHeightView: UIView!
     @IBOutlet private var hsvDiameterView: UIView!
     @IBOutlet private var hsvMassView: UIView!
@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet private var hsvMassUnits: UILabel!
     @IBOutlet private var hsvPayloadWeightsNumbers: UILabel!
     @IBOutlet private var hsvPayloadWeightsUnits: UILabel!
-// MARK: - Stages outlets
+    // MARK: - Stages outlets
     @IBOutlet private var firstLaunch: UILabel!
     @IBOutlet private var countryName: UILabel!
     @IBOutlet private var costAmount: UILabel!
@@ -27,13 +27,14 @@ class MainViewController: UIViewController {
     @IBOutlet private var secondEngines: UILabel!
     @IBOutlet private var secondFuel: UILabel!
     @IBOutlet private var secondBurnTime: UILabel!
-// MARK: - Public props
+
+    // MARK: - Public props
     @IBOutlet var rocketImage: UIImageView!
     var rockets: [RocketModel] = []
     var arrayMainVC: [RocketModel]!
     var indexNumberPVC = 0
     var tmpRocketName: String!
-// MARK: - Horizontal stack
+    // MARK: - Horizontal stack
     var tmpHeightNumbers: String!
     var tmpHeightUnits: String!
     var tmpDiameterNumbers: String!
@@ -42,7 +43,7 @@ class MainViewController: UIViewController {
     var tmpMassUnits: String!
     var tmpPayloadWeightsNumbers: String!
     var tmpPayloadWeightUnits: String!
-// MARK: - Main rocket info
+    // MARK: - Main rocket info
     var tmpFirstLaunch: String!
     var tmpCountryName: String!
     var tmpCostAmount: String!

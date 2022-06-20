@@ -8,20 +8,23 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reload()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(reload),
-                                               name: Notification.Name("reloadData"),
-                                               object: nil)
-    }
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reload),
+            name: Notification.Name("reloadData"),
+            object: nil
+        ) }
     @objc func reload() {
-        networkAPI.fetchDataForRockets(dataType: [RocketModel].self,
-                                       url: networkAPI.spacexDataURL,
-                                       formaterString: StringOld.oldStringListRocket.rawValue) { data in
-                self.newArray = data
-                self.pvcMethod()
-                self.dataTransition()
+        networkAPI.fetchDataForRockets(
+            dataType: [RocketModel].self,
+            url: networkAPI.spacexDataURL,
+            formaterString: StringOld.oldStringListRocket.rawValue
+        ) { data in
+            self.newArray = data
+            self.pvcMethod()
+            self.dataTransition()
         }
-}
+    }
     private func pvcMethod() {
         guard let initVC = detailedIndex(index: 0)
         else { return }
@@ -29,7 +32,9 @@ class PageViewController: UIPageViewController {
         dataSource = self
     }
     private func detailedIndex(index: Int) -> MainViewController? {
-        guard let mVC = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
+        guard let mVC = storyboard?.instantiateViewController(
+            withIdentifier: "MainViewController"
+        ) as? MainViewController
         else { return nil }
         guard index >= 0
         else { return nil }
@@ -79,19 +84,25 @@ class PageViewController: UIPageViewController {
         //            mVC.tmpHeightNumbers = String(newArray[index].height.meters)
         //            mVC.tmpDiameterNumbers = String(newArray[index].diameter.meters)
         //            mVC.tmpMassNumbers = String(newArray[index].mass.kg)
-        //            mVC.tmpPayloadWeightsNumbers = String(format.formatNums(value: newArray[index].payloadWeights.first?.kg ?? 0))
+        //            mVC.tmpPayloadWeightsNumbers = String(format.formatNums
+//        (value: newArray[index].payloadWeights.first?.kg ?? 0))
         mVC.indexNumberPVC = index
         return mVC
     }
     private func dataTransition() {
-        guard let mVC = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
+        guard let mVC = storyboard?.instantiateViewController(
+            withIdentifier: "MainViewController"
+        ) as? MainViewController
         else { return }
         mVC.arrayMainVC = self.newArray
     }
 }
 // MARK: - Extension PageViewController
 extension PageViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(
+        _ pageViewController: UIPageViewController,
+        viewControllerBefore viewController: UIViewController
+    ) -> UIViewController? {
         var mVC = (viewController as? MainViewController)!.indexNumberPVC
         mVC -= 1
         return detailedIndex(index: mVC)
